@@ -5,74 +5,90 @@
 }
 
 body {
+    background: #0f0f14;
+    color: #e5e5e5;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    background: #ffffff;
-    color: #333333;
-    max-width: 900px;
+    max-width: 1100px;
     margin: auto;
-    padding: 60px 20px;
+    padding: 80px 20px;
 }
 
 /* HERO */
 .hero {
-    margin-bottom: 100px;
+    margin-bottom: 120px;
 }
 
 .hero h1 {
-    font-size: 48px;
+    font-size: 56px;
     font-weight: 600;
+    letter-spacing: -1px;
 }
 
 .tagline {
     margin-top: 10px;
-    font-size: 18px;
-    color: #666;
+    font-size: 20px;
+    color: #a0a0a0;
 }
 
 .links {
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 .links a {
-    margin-right: 15px;
+    margin-right: 20px;
     text-decoration: none;
     color: #b366ff;
-    font-weight: 500;
+    font-size: 15px;
 }
 
 /* PROJECT */
 .project {
-    margin-bottom: 100px;
+    margin-bottom: 120px;
 }
 
 .project h2 {
-    font-size: 26px;
+    font-size: 28px;
     margin-bottom: 10px;
 }
 
-.project-desc {
-    color: #555;
-    margin-bottom: 20px;
+.desc {
+    color: #a0a0a0;
+    margin-bottom: 25px;
+    max-width: 600px;
 }
 
-/* DASHBOARD */
-.dashboard img {
+/* IMAGE CONTAINER */
+.image-container {
     width: 100%;
-    border-radius: 10px;
-    margin: 20px 0;
+    margin: 25px 0;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 1px solid #1f1f2a;
 }
 
-/* GRID FOR SWIGGY */
-.dashboard-grid {
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.image-container:hover img {
+    transform: scale(1.02);
+}
+
+/* GRID */
+.grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 15px;
-    margin: 20px 0;
+    gap: 20px;
 }
 
-.dashboard-grid img {
-    width: 100%;
-    border-radius: 10px;
+.image-container span {
+    display: block;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #888;
 }
 
 /* INSIGHTS */
@@ -80,21 +96,19 @@ body {
     margin-top: 20px;
 }
 
-.insights div {
+.insights p {
     margin-bottom: 10px;
-    display: flex;
-    align-items: center;
+    color: #cfcfcf;
 }
 
 .insights span {
     color: #b366ff;
-    font-weight: bold;
     margin-right: 10px;
 }
 
 /* IMPACT */
 .impact {
-    margin-top: 20px;
-    color: #666;
+    margin-top: 25px;
+    color: #888;
     font-style: italic;
 }
