@@ -15,118 +15,97 @@ body {
     line-height: 1.6;
 }
 
-/* TYPOGRAPHY */
-h1 {
-    font-size: 52px;
-    font-weight: 600;
-    letter-spacing: -1px;
-}
-
-h2 {
-    font-size: 26px;
-    font-weight: 500;
-}
-
-p {
-    color: #a0a0a8;
-}
-
 /* HERO */
 .hero {
     margin-bottom: 120px;
     animation: fadeUp 0.8s ease;
 }
 
+.hero h1 {
+    font-size: 52px;
+    font-weight: 600;
+}
+
 .tagline {
     margin-top: 10px;
     font-size: 18px;
+    color: #a0a0a8;
 }
 
 .links {
-    margin-top: 25px;
+    margin-top: 20px;
 }
 
 .links a {
     margin-right: 20px;
-    text-decoration: none;
     color: #b366ff;
+    text-decoration: none;
     font-size: 14px;
-    transition: opacity 0.2s ease;
 }
 
-.links a:hover {
-    opacity: 0.7;
-}
-
-/* PROJECT SECTION */
+/* PROJECT */
 .project {
     margin-bottom: 120px;
     animation: fadeUp 0.8s ease;
 }
 
-.desc {
-    margin: 12px 0 24px 0;
-    max-width: 580px;
+.project h2 {
+    font-size: 26px;
 }
 
-/* IMAGE CONTAINER */
+.desc {
+    margin: 10px 0 20px;
+    color: #a0a0a8;
+    max-width: 600px;
+}
+
+/* IMAGE */
 .image-container {
     width: 100%;
+    height: 320px;
     border-radius: 10px;
     overflow: hidden;
     border: 1px solid #1c1c24;
-    background: #14141b;
-    transition: transform 0.3s ease, border 0.3s ease;
+    margin: 20px 0;
+    transition: transform 0.3s ease;
 }
 
 .image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
 }
 
-/* HOVER EFFECT (SUBTLE) */
 .image-container:hover {
-    transform: translateY(-2px);
-    border: 1px solid #2a2a38;
+    transform: translateY(-3px);
 }
 
-/* HOTEL (FULL WIDTH BUT CONTROLLED HEIGHT) */
-.project .image-container {
-    height: 320px;
-}
-
-/* SWIGGY GRID (COMPACT) */
+/* SWIGGY GRID */
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
-    margin-top: 20px;
 }
 
-/* SMALL DASHBOARDS */
 .grid .image-container {
-    height: 180px;  /* 🔥 compact size */
+    height: 180px;  /* 🔥 compact dashboards */
 }
 
-/* LABEL UNDER IMAGE */
 .image-container span {
     display: block;
-    padding: 8px 10px;
     font-size: 12px;
+    padding: 8px;
     color: #7a7a85;
 }
 
 /* INSIGHTS */
 .insights {
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .insights p {
-    margin-bottom: 8px;
-    color: #cfcfd6;
     font-size: 14px;
+    margin-bottom: 6px;
 }
 
 .insights span {
@@ -136,10 +115,38 @@ p {
 
 /* IMPACT */
 .impact {
-    margin-top: 20px;
+    margin-top: 15px;
     font-size: 14px;
     color: #8a8a95;
     font-style: italic;
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    background: rgba(10, 10, 15, 0.95);
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 95%;
+    max-height: 90%;
+    object-fit: contain;  /* 🔥 perfect fit */
+    border-radius: 8px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #b366ff;
+    font-size: 30px;
+    cursor: pointer;
 }
 
 /* ANIMATION */
