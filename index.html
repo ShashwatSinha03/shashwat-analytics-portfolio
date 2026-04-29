@@ -6,14 +6,13 @@
 <title>Shashwat Sinha</title>
 <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
 <!-- HERO -->
 <section class="hero">
     <h1>Shashwat Sinha</h1>
-    <p class="tagline">
-        Data Analyst building decision systems from raw data.
-    </p>
+    <p class="tagline">Data Analyst building decision systems from raw data.</p>
 
     <div class="links">
         <a href="https://github.com/ShashwatSinha03" target="_blank">GitHub</a>
@@ -33,56 +32,90 @@
         </p>
 
         <div class="image-container">
-            <img src="assets/hotel.png" alt="Hotel Dashboard">
+            <img src="assets/hotel.png" onclick="openModal(this)">
         </div>
 
         <div class="insights">
-            <p><span>01</span> Long lead times increase cancellation probability</p>
-            <p><span>02</span> No-deposit bookings drive major revenue loss</p>
-            <p><span>03</span> Repeat customers show stable revenue patterns</p>
+            <p><span>01</span> Long lead times increase cancellations</p>
+            <p><span>02</span> No-deposit bookings cause revenue loss</p>
+            <p><span>03</span> Repeat users show stable revenue</p>
         </div>
 
         <p class="impact">
-            Result → Designed deposit and segmentation strategies to improve revenue predictability.
+            Result → Designed deposit-based strategy to improve revenue predictability.
         </p>
     </div>
-
 
     <!-- SWIGGY -->
     <div class="project">
         <h2>Swiggy Restaurant Analytics</h2>
 
         <p class="desc">
-            Python ETL + Tableau dashboards built on 91K+ records to analyze demand, pricing, and ratings across 28 cities.
+            Python ETL + Tableau dashboards on 91K+ records analyzing demand, pricing, and ratings.
         </p>
 
         <div class="grid">
             <div class="image-container">
-                <img src="assets/swiggy1.png" alt="">
+                <img src="assets/swiggy1.png" onclick="openModal(this)">
                 <span>Executive Overview</span>
             </div>
             <div class="image-container">
-                <img src="assets/swiggy2.png" alt="">
+                <img src="assets/swiggy2.png" onclick="openModal(this)">
                 <span>Pricing & Segmentation</span>
             </div>
             <div class="image-container">
-                <img src="assets/swiggy3.png" alt="">
+                <img src="assets/swiggy3.png" onclick="openModal(this)">
                 <span>Temporal Patterns</span>
             </div>
         </div>
 
         <div class="insights">
-            <p><span>01</span> Bengaluru dominates platform demand</p>
-            <p><span>02</span> ₹150–₹300 is the highest conversion zone</p>
-            <p><span>03</span> Price has near-zero impact on ratings</p>
+            <p><span>01</span> Bengaluru dominates demand</p>
+            <p><span>02</span> ₹150–₹300 drives max orders</p>
+            <p><span>03</span> Price ≠ rating correlation</p>
         </div>
 
         <p class="impact">
-            Result → Identified scalable pricing strategy and city-level expansion opportunities.
+            Result → Identified pricing strategy and city expansion insights.
         </p>
     </div>
 
 </section>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-img">
+</div>
+
+<script>
+function openModal(img) {
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("modal-img");
+
+    modal.style.display = "flex";
+    modalImg.src = img.src;
+}
+
+// Close button
+document.querySelector(".close").onclick = function () {
+    document.getElementById("modal").style.display = "none";
+};
+
+// Click outside
+document.getElementById("modal").onclick = function (e) {
+    if (e.target.id === "modal") {
+        this.style.display = "none";
+    }
+};
+
+// ESC key
+document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+        document.getElementById("modal").style.display = "none";
+    }
+});
+</script>
 
 </body>
 </html>
